@@ -8,14 +8,14 @@ variable "private_route_table_ids" {
 }
 variable "aws_region" { type = string }
 
-variable "enable_s3_gateway_endpoint" { 
-  type = bool
+variable "enable_s3_gateway_endpoint" {
+  type    = bool
   default = true
-  }
-variable "enable_dynamodb_gateway_endpoint" { 
-  type = bool
-  default = true 
-  }
+}
+variable "enable_dynamodb_gateway_endpoint" {
+  type    = bool
+  default = true
+}
 
 variable "interface_endpoints" {
   type = map(object({
