@@ -16,6 +16,6 @@ module "flow_logs" {
   name           = "fintech1-demo1-${var.environment}"
   vpc_id         = data.terraform_remote_state.vpc.outputs.vpc_id
   retention_days = var.retention_days
-  kms_key_arn     = var.kms_key_arn
-  tags            = local.tags
+  kms_key_arn    = var.kms_key_arn
+  tags           = local.tags
 }

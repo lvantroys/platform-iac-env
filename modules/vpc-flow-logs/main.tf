@@ -24,8 +24,8 @@ resource "aws_iam_role" "this" {
 
 data "aws_iam_policy_document" "write_logs" {
   statement {
-    effect = "Allow"
-    actions = ["logs:CreateLogStream", "logs:PutLogEvents", "logs:DescribeLogStreams"]
+    effect    = "Allow"
+    actions   = ["logs:CreateLogStream", "logs:PutLogEvents", "logs:DescribeLogStreams"]
     resources = ["${aws_cloudwatch_log_group.this.arn}:*"]
   }
 }
